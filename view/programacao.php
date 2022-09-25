@@ -4,17 +4,17 @@ require_once ABSPATH.'model/participante.php';
 
 $programacao = new Programacao();
 //FAZER PESQUISA NO BANCO DE TODAS AS DATAS;
-$data = array('01/06','02/06','03/06');
+$data = array('05/10','06/10','07/10');
 $pagina=null;
 if(!empty($_GET['pagina'])){
     if($_GET['pagina']==0){
-        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-06-01');
+        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-10-05');
         $pagina = 0;
     }else if($_GET['pagina']==1){
-        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-06-02');
+        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-10-06');
         $pagina = 1;
     }else if($_GET['pagina']==2){
-        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-06-03');
+        $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-10-07');
         $pagina = 2;
     }
 }else{
@@ -53,7 +53,7 @@ $hojeDia = date("Y-m-d");
   ?>
 </div>
 <br>
-
+<!--
 <div class="container ">
 <div class="row align-items-stretch d-flex justify-content-center">
 <div class="col-5 border pt-3 mr-2" style="background-color: #e3fbe3">
@@ -62,7 +62,6 @@ $hojeDia = date("Y-m-d");
      <h6 class="p-2 text-center">Faça a Inscrição e o Envio da frase até o dia 02/06/2022</h6>
 
      <?php
-     echo $hojedia;
      if(date("Y-m-d", strtotime($hojeDia))<'2022-06-03'){
      ?>
     <div class=" d-flex justify-content-center text-center" >
@@ -81,16 +80,17 @@ $hojeDia = date("Y-m-d");
 </div>
 </div>
 </div>
+-->
 <br>
 <nav aria-label="Dias do Evento">
   <ul class="pagination pagination-lg justify-content-center">
     <?php
 		for($i=0;$i<count($data);$i++){
 			$estilo = "";
-			$cor_texto = "style='color: #04622e'";
+			$cor_texto = "style='color: #337537'";
 			if($pagina == $i || $pagina == null && $i==0){
 				$estilo = "disabled";
-				$cor_texto = "style='color: #73b61c'";
+				$cor_texto = "style='color: #acbf2e'";
 			}
 			//Mudar a forma de aparecer a data, de acordo com o array que irá chegar do banco.
 			echo "<li class='page-item $estilo'  ><a class='page-link' $cor_texto href='?page=programacao&pagina=$i'>$data[$i]</a></li>";
@@ -103,7 +103,7 @@ $hojeDia = date("Y-m-d");
 foreach($programacoes as $indice => $programa){
   $palestrantes = $programacao->getPalestrantes($programa->id_atividade);
 ?>
-<div class="container border bg-white pt-3">
+<div class="container border bg-white pt-3" id="<?php echo $programa->id_atividade; ?>">
     <?php
         $inscritos = $programacao->numeroInscritos($programa->id_data_atividade);
         $vagas = $programa->limite-$inscritos[0]->total;
@@ -130,7 +130,7 @@ foreach($programacoes as $indice => $programa){
         }
      ?>
     <div class="col-7">
-      
+
       <h6><?php echo $programa->descricao;?></h6>
       <?php
         if($programa->nomes !="Youtube" && $programa->nomes !="Google Meet"){
@@ -154,7 +154,7 @@ foreach($programacoes as $indice => $programa){
         }
       ?>
       <h6> Vagas: <?php if($programa->limite==0) echo "ilimitada"; else echo $vagas;?></h6>
-      
+
     </div>
     <?php
      if($hojeDia<=$programa->data){
@@ -220,7 +220,7 @@ foreach($programacoes as $indice => $programa){
        ?>
   </div>
   </div>
-  
+
  <!-- <div class="row align-items-center">
     <?php
       foreach($palestrantes as $indice => $palestrante){
@@ -237,6 +237,7 @@ foreach($programacoes as $indice => $programa){
 }
 if($pagina==2){
 ?>
+<!--
 <div class="container ">
 <div class="row align-items-center">
 <div class="col-12 border  pt-3 mr-2" style="background-color: #e3fbe3">
@@ -253,6 +254,7 @@ if($pagina==2){
 </div>
 </div>
 </div>
+-->
 <br>
 <?php
 }
@@ -260,6 +262,7 @@ if($pagina==2){
 <?php
 if($pagina==1){
 ?>
+<!--
 <div class="container ">
 <div class="row align-items-center">
 <div class="col-12 border  pt-3 mr-2" style="background-color: #e3fbe3">
@@ -274,6 +277,7 @@ if($pagina==1){
 </div>
 </div>
 </div>
+-->
 <br>
 <?php
 }

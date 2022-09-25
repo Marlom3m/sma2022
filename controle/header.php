@@ -15,7 +15,7 @@
 if(!isset($_SESSION)){
 session_start();
 }
-$_SESSION['evento'] = 1;
+$_SESSION['evento'] = 3;
 if(!empty($_SESSION['tipo'])){
 if($_SESSION['tipo'] == 1){
 ?>
@@ -91,10 +91,10 @@ if($_SESSION['tipo'] == 1){
 ?>
 <!-- lista faixa amarela  style="background-color: #f4b413"-->
 <main class="col h-100 pt-1 bg-light">
-<div class="jumbotron jumbotron-fluid "  style="background-image: url('imagens/fundo_sma.png'); background-size: cover;"> 
-<img src="imagens/logo_sma.png" width="23%" class="mx-auto d-block"> 
+<div class="jumbotron jumbotron-fluid "  style="background-image: url('imagens/seagro_fundo.jpeg'); background-size: cover;">
+<img src="imagens/arte_seagro.png" width="50%" class="mx-auto d-block">
 <br>
-<nav class="navbar navbar-expand-md sticky-top" style="background-color: #73b61c">
+<nav class="navbar navbar-expand-md sticky-top" style="background-color: #acbf2e">
 <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 Menu
 </button>

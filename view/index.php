@@ -1,16 +1,16 @@
 <br>
 <div class="container border bg-white font-weight-bold lead">
   <div class= "row col-12 mb-3 text-center ">
-  A Semana do Meio Ambiente do IFMS é um evento promovido anualmente em alusão ao Dia Mundial do Meio Ambiente, celebrado em 5 de junho.
+  A Semana Acadêmica da Agronomia e Agronegócio 2022 visa propor reflexões a comunidade acadêmica do IFMS Campus Ponta Porã, bem como atualizações nos assuntos do Agronegócio de Mato Grosso do Sul.
 </div>
  <div class="row col-12 mb-3 text-center justify-content-around">
-Esse ano a programação será realizada nos dias 01 a 03 de junho e contará com uma programação que inclui diversas atividades gratuitas como oficinas, palestras, visitas técnicas, entre outras atividades.
+Esse ano a programação será realizada nos dias 05 a 07 de outubro e contará com uma programação que inclui diversas atividades gratuitas como oficinas, palestras, entre outras atividades.
 <div class="font-italic">(Parte da programação será aberta ao público externo)</div>
 </div>
 
 
 <div class="row p-3 col-12 text-center justify-content-around">
-<div class = "col-8 mb-3 font-weight-bold text-light"  style="background-color: #008000">
+<div class = "col-8 mb-3 font-weight-bold text-light"  style="background-color: #337537">
 Bom evento a todos e todas!
 </div>
 </div>
