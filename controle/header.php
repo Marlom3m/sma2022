@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Semana do Meio Ambiente 2022</title>
+<title>SEAAGRO 2022</title>
 <link rel="stylesheet" href="<?php echo BASEURL; ?>cdn/css/bootstrap.css">
 <link rel="stylesheet" href="<?php echo BASEURL; ?>cdn/css/jquery-ui.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
