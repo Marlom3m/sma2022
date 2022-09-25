@@ -17,9 +17,12 @@ abstract class Database{
     private static $dbtype   = "mysql";
     private static $host     = "localhost";
     private static $port     = "3306";
-    private static $user     = "u411879655_sisnovo";
+    private static $user     = "root";
+      private static $password = "";
+      private static $db       = "sma";
+  /*  private static $user     = "u411879655_sisnovo";
     private static $password = "Sisnovo1";
-    private static $db       = "u411879655_sisnovo";
+    private static $db       = "u411879655_sisnovo";*/
 
     /*Metodos que trazem o conteudo da variavel desejada
     @return   $xxx = conteudo da variavel solicitada*/
