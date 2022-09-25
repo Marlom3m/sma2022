@@ -210,15 +210,20 @@ foreach($programacoes as $indice => $programa){
       ?>
       <div class="col-12 mb-2">
       <!--<h5 class="text-center"><?php if(count($palestrantes)>1){echo "Ministrado por: ";}else{echo "Ministrado por: ";} ?></h5>-->
-      <h6 class="text-center font-weight-bold">Ministrado por:</h6>
+      <h6 class="col-12 text-center font-weight-bold">Ministrado por:</h6>
+      <div class="d-flex justify-content-around">
       <?php
         foreach($palestrantes as $indice => $palestrante){
        ?>
+       <div class="col-3">
+       <img class="col-12 rounded-circle"  src="<?php echo $palestrante->foto; ?>"><br>
       <h6 class="font-italic text-center"><?php echo $palestrante->nome; if(isset($palestrante->instituicao)){echo " (".$palestrante->instituicao.")";}?></h6>
+    </div>
       <?php
         }
        ?>
   </div>
+</div>
   </div>
 
  <!-- <div class="row align-items-center">
