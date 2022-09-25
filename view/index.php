@@ -10,7 +10,7 @@ Esse ano a programação será realizada nos dias 05 a 07 de outubro e contará 
 
 
 <div class="row p-3 col-12 text-center justify-content-around">
-<div class = "col-8 mb-3 font-weight-bold text-light"  style="background-color: #337537">
+<div class = "col-8 pt-1 mb-3 font-weight-bold text-light"  style="background-color: #04622e">
 Bom evento a todos e todas!
 </div>
 </div>
