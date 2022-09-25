@@ -18,7 +18,7 @@ if(!empty($_GET['pagina'])){
         $pagina = 2;
     }
 }else{
-    $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-06-01');
+    $programacoes = $programacao->getProgramacaoData($_SESSION['evento'],'2022-10-05');
     $pagina = 0;
 }
 /* TROCAR POR ESSE DEPOIS DE ARRUMADO
@@ -122,9 +122,9 @@ foreach($programacoes as $indice => $programa){
         <h6><?php if(!empty($programa->senha)) {echo "Senha: ".$programa->senha;} ?></h6>
         </div>
         <div class="col-12 text-right">
-         <?php if(!empty($programa->qrcode)) {  ?>
-        <h6><a href="https://projetosifms.com.br/sma2022/imagens/qrcode/<?php echo $programa->qrcode; ?>" target="_blank">QRCODE</a></h6>
-        <?php } ?>
+
+        <h6><a href="?page=qrcode&id=<?php echo $programa->id_data_atividade; ?>" target="_blank">QRCODE</a></h6>
+
         </div>
      <?php
         }
@@ -270,8 +270,8 @@ if($pagina==1){
      <h5 class="p-2 text-white text-center" style="background-color: #04622e" >EXPOSIÇÃO DE PRODUTOS DAS MULHERES EMPREENDEDORAS</h5>
      <h6>Exposição</h6>
      <h6 class="font-weight-bold">Data: 02/06 - 19:00 às 22:00 hs</h6>
-     <!-- <h6>Local: Youtube</h6>
-      <h6> Vagas: Ilimitado</h6> -->
+     < <h6>Local: Youtube</h6>
+      <h6> Vagas: Ilimitado</h6>
       <h6 class="text-center font-weight-bold">Ministrado por:</h6>
       <h6 class="font-italic text-center">Mulheres empreendedoras</h6>
 </div>

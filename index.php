@@ -7,6 +7,8 @@
     include 'view/index.php';
   }else if ($_GET['page'] == 'eventos') {
     include 'opcoes/Evento/lista_evento.php';
+  }else if ($_GET['page'] == 'qrcode') {
+    include 'controle/gerarQrCode.php';
   }else if($_GET['page'] == 'Salas'){
     include 'opcoes/Sala/lista_sala.php';
   }else if($_GET['page'] == 'Turnos'){

@@ -11,7 +11,7 @@
  require_once ABSPATH.'opcoes/Usuario/gridUsuarios.php';
  if($_SESSION['tipo']==1){
  $usuarios = allUsuariosAtividade($_GET['id_atividade']);
-
+if(!empty($usuarios)){
 ?>
 <div class="text-center h2">
     <?php
@@ -46,6 +46,7 @@
 
 </div>
 <?php
+}
  }else{
     header('Location: '.BASEURL.'?page=programacao'); exit;
  }
@@ -70,5 +71,3 @@ foreach($pesquisa as $indice => $ativ){
 }
 */
 ?>
-
-

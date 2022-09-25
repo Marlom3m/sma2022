@@ -98,7 +98,7 @@ require_once DBAPI;
       $parametros = array($dataAtividade);
       return $this->selectDB($sql,$parametros);
     }
-    
+
     function buscarParticipantes($atividade){
       $sql = "Select u.nome as unome, u.cpf, presenca, da.data, da.hora, a.nome as anome, s.nome as snome, dap.fk_data_atividade, dap.fk_participante
             from usuario as u
@@ -111,12 +111,18 @@ require_once DBAPI;
             ORDER BY unome;";
       $parametros = array($atividade);
       return $this->selectDB($sql,$parametros);
-            
+
     }
-    
+
     function atividades(){
       $sql = "select nome, senha, id_atividade from data_atividade join atividade on id_atividade = fk_atividade";
       $parametros = array();
+      return $this->selectDB($sql,$parametros);
+    }
+
+    function buscaAtividade($id){
+      $sql = "select nome, id_atividade from atividade where id_atividade = ?";
+      $parametros = array($id);
       return $this->selectDB($sql,$parametros);
     }
 

@@ -60,9 +60,9 @@ function add() {
     }
     $retorno = null;
     //ARRUMAR DEPOIS PARA QUALQUER DATA
-	if($dataAtividade->getData() == "2022-06-01"){
+	if($dataAtividade->getData() == "2022-10-05"){
 	    $retorno = 0;
-	}else if($dataAtividade->getData() == "2022-06-02"){
+	}else if($dataAtividade->getData() == "2022-10-06"){
 	    $retorno = 1;
 	}else{
 	    $retorno = 2;
@@ -80,9 +80,9 @@ function remover(){
 	$_SESSION['type'] = 'success';
 	//ARRUMAR DEPOIS PARA QUALQUER DATA
 	$retorno = null;
-	if($dataAtividade->getData() == "2022-06-01"){
+	if($dataAtividade->getData() == "2022-10-05"){
 	    $retorno = 0;
-	}else if($dataAtividade->getData() == "2022-06-02"){
+	}else if($dataAtividade->getData() == "2022-10-06"){
 	    $retorno = 1;
 	}else{
 	    $retorno = 2;
